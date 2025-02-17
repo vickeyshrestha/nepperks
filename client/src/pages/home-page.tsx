@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <main className="container mx-auto px-4 py-16">
         <div className="text-center space-y-6 mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-primary">
@@ -53,19 +53,19 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold mb-6">Featured Businesses</h2>
             <div className="grid gap-4">
               <img
-                src="https://images.unsplash.com/photo-1481437156560-3205f6a55735"
-                alt="Local Business"
+                src="https://images.unsplash.com/photo-1558013066-8c99e0c0b438"
+                alt="Nepalese Temple"
                 className="rounded-lg object-cover h-48 w-full"
               />
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="https://images.unsplash.com/photo-1519057016395-76b7690327e0"
-                  alt="Shop Interior"
+                  src="https://images.unsplash.com/photo-1544014646-b5b3a4c39944"
+                  alt="Local Market"
                   className="rounded-lg object-cover h-32"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf"
-                  alt="Street Shop"
+                  src="https://images.unsplash.com/photo-1582560475093-ba66accbc424"
+                  alt="Traditional Shop"
                   className="rounded-lg object-cover h-32"
                 />
               </div>

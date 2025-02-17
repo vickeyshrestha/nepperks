@@ -152,8 +152,8 @@ export default function CustomerDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   <img
-                    src="https://images.unsplash.com/photo-1573855619003-97b4799dcd8b"
-                    alt="Shop Interior"
+                    src="https://images.unsplash.com/photo-1625046149199-501002f162d2"
+                    alt="Traditional Nepalese Market"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                   <p className="text-muted-foreground">
@@ -169,8 +169,8 @@ export default function CustomerDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   <img
-                    src="https://images.unsplash.com/photo-1561710309-efd9aee84194"
-                    alt="Local Markets"
+                    src="https://images.unsplash.com/photo-1580977251946-3029f1758515"
+                    alt="Nepalese Street Market"
                     className="w-full h-48 object-cover rounded-lg"
                   />
                   <p className="text-muted-foreground">
