@@ -13,62 +13,88 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-3xl">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold">About NepPerks</DialogTitle>
+          <DialogTitle className="text-3xl font-bold text-primary">About NepPerks</DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-8 py-4">
+        <div className="space-y-8 py-6">
           {/* Company Overview */}
-          <section className="space-y-4">
-            <h3 className="text-xl font-semibold">Our Mission</h3>
-            <p className="text-muted-foreground">
-              NepPerks is dedicated to supporting local Nepalese businesses by creating a dynamic
-              rewards-based system that enhances customer engagement and builds lasting relationships
-              between businesses and their patrons.
-            </p>
-          </section>
-
-          {/* Owner's Information */}
-          <section className="space-y-2">
-            <h3 className="text-xl font-semibold">Vickey Shrestha</h3>
-            <p className="text-sm text-muted-foreground">Founder & Owner</p>
-            <p className="text-muted-foreground">
-              Based in Fort Worth, Texas
-            </p>
+          <section className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-semibold">Who We Are</h3>
+              <p className="text-muted-foreground">
+                NepPerks is a pioneering startup dedicated to supporting local Nepalese businesses 
+                through an innovative rewards-based system. We bridge the gap between businesses 
+                and customers, fostering stronger community relationships and economic growth.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden">
+              <img
+                src="/owner.jpg"
+                alt="Vickey Shrestha"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4 bg-muted">
+                <h4 className="font-semibold">Vickey Shrestha</h4>
+                <p className="text-sm text-muted-foreground">Founder & Owner</p>
+                <p className="text-sm text-muted-foreground">Based in Fort Worth, Texas</p>
+              </div>
+            </div>
           </section>
 
           {/* Vision & Mission */}
           <section className="space-y-4">
-            <h3 className="text-xl font-semibold">Our Vision</h3>
-            <ul className="space-y-2 text-muted-foreground list-disc pl-4">
-              <li>Empowering small businesses through increased customer engagement</li>
-              <li>Providing value to customers via innovative perks and rewards</li>
-              <li>Building a sustainable and thriving business community</li>
-            </ul>
+            <h3 className="text-2xl font-semibold">Our Vision</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="p-4 rounded-lg border bg-card">
+                <h4 className="font-semibold mb-2">Empowering Businesses</h4>
+                <p className="text-sm text-muted-foreground">
+                  Supporting small businesses through increased customer engagement and loyalty programs
+                </p>
+              </div>
+              <div className="p-4 rounded-lg border bg-card">
+                <h4 className="font-semibold mb-2">Customer Value</h4>
+                <p className="text-sm text-muted-foreground">
+                  Delivering meaningful rewards and perks that enhance the shopping experience
+                </p>
+              </div>
+              <div className="p-4 rounded-lg border bg-card">
+                <h4 className="font-semibold mb-2">Community Growth</h4>
+                <p className="text-sm text-muted-foreground">
+                  Building a sustainable business ecosystem that benefits all stakeholders
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Owner's Message */}
           <section className="space-y-4">
-            <h3 className="text-xl font-semibold">A Message from Our Founder</h3>
-            <blockquote className="border-l-2 pl-4 italic text-muted-foreground">
-              "Growing up in Nepal, I witnessed the incredible potential of small businesses and their
-              impact on communities. NepPerks was born from a vision to bridge the gap between these
-              businesses and their customers, creating a win-win relationship through a modern rewards
-              system. Together, we can build stronger communities and successful businesses."
+            <h3 className="text-2xl font-semibold">A Message from Our Founder</h3>
+            <blockquote className="border-l-4 border-primary pl-6 italic">
+              <p className="text-muted-foreground">
+                "Growing up in Nepal, I witnessed the incredible potential of small businesses 
+                and their impact on communities. NepPerks was born from a vision to bridge 
+                the gap between these businesses and their customers, creating a win-win 
+                relationship through a modern rewards system. Together, we can build stronger 
+                communities and successful businesses."
+              </p>
+              <footer className="mt-2 font-semibold">- Vickey Shrestha</footer>
             </blockquote>
           </section>
 
           {/* Call to Action */}
-          <section className="space-y-4">
-            <h3 className="text-xl font-semibold">Join Our Community</h3>
-            <p className="text-muted-foreground">
-              Whether you're a business owner looking to grow your customer base or a customer eager
-              to support local businesses while earning rewards, NepPerks is here for you.
+          <section className="bg-primary/5 rounded-lg p-6 text-center">
+            <h3 className="text-2xl font-semibold mb-4">Join Our Community</h3>
+            <p className="text-muted-foreground mb-6">
+              Whether you're a business owner looking to grow your customer base or a customer 
+              eager to support local businesses while earning rewards, NepPerks is here for you.
             </p>
             {!user && (
               <Link href="/auth">
-                <Button className="mt-4">Get Started Today</Button>
+                <Button size="lg" className="animate-pulse">
+                  Get Started Today
+                </Button>
               </Link>
             )}
           </section>
