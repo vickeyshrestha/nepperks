@@ -45,9 +45,6 @@ export default function HomePage() {
             <p className="text-muted-foreground mb-4">
               Simply scan QR codes or upload receipts to earn points automatically
             </p>
-            <Link href="/how-it-works" className="text-primary hover:underline">
-              Learn more
-            </Link>
           </div>
         </section>
 
