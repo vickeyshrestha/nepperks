@@ -28,10 +28,17 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
                 through an innovative rewards-based system. We bridge the gap between businesses 
                 and customers, fostering stronger community relationships and economic growth.
               </p>
-              <div className="mt-4">
-                <h4 className="font-semibold">Vickey Shrestha</h4>
-                <p className="text-sm text-muted-foreground">Founder & Owner</p>
-                <p className="text-sm text-muted-foreground">Based in Fort Worth, Texas</p>
+              <div className="mt-4 space-y-4">
+                <div>
+                  <h4 className="font-semibold">Vickey Shrestha</h4>
+                  <p className="text-sm text-muted-foreground">Co-Founder & CEO</p>
+                  <p className="text-sm text-muted-foreground">Based in Fort Worth, Texas</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Utsav Thapa</h4>
+                  <p className="text-sm text-muted-foreground">Co-Founder & CTO</p>
+                  <p className="text-sm text-muted-foreground">Based in Fort Worth, Texas</p>
+                </div>
               </div>
             </div>
           </section>
