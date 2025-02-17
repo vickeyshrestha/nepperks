@@ -1,5 +1,4 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./dialog";
-import { Avatar, AvatarImage, AvatarFallback } from "./avatar";
 import { Button } from "./button";
 import { Link } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
@@ -11,14 +10,14 @@ interface AboutDialogProps {
 
 export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
   const { user } = useAuth();
-  
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">About NepPerks</DialogTitle>
         </DialogHeader>
-        
+
         <div className="space-y-8 py-4">
           {/* Company Overview */}
           <section className="space-y-4">
@@ -31,11 +30,12 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
           </section>
 
           {/* Owner's Information */}
-          <section className="flex items-center space-x-6">
-            <Avatar className="h-24 w-24">
-              <AvatarImage src="/owner.jpg" alt="Vickey Shrestha" />
-              <AvatarFallback>VS</AvatarFallback>
-            </Avatar>
+          <section className="flex items-start space-x-6">
+            <img 
+              src="/owner.jpg" 
+              alt="Vickey Shrestha" 
+              className="h-32 w-32 object-cover rounded-lg"
+            />
             <div>
               <h3 className="text-xl font-semibold">Vickey Shrestha</h3>
               <p className="text-sm text-muted-foreground">Founder & Owner</p>
