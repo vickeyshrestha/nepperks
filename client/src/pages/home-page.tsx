@@ -33,6 +33,9 @@ export default function HomePage() {
             <p className="text-muted-foreground mb-4">
               Earn points on every purchase and redeem them for exclusive rewards
             </p>
+            <Link href="/customer-rewards" className="text-primary hover:underline">
+              Learn more
+            </Link>
           </div>
           <div className="text-center p-6 rounded-lg border bg-card">
             <h3 className="text-xl font-semibold mb-4">For Businesses</h3>
