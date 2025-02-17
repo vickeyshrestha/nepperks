@@ -28,7 +28,7 @@ export default function HomePage() {
         </div>
 
         <section className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-6 rounded-lg border bg-card">
+          <div className="text-center p-6 rounded-lg border" style={{ backgroundColor: "#A2F0EB" }}>
             <h3 className="text-xl font-semibold mb-4">For Customers</h3>
             <p className="text-muted-foreground mb-4">
               Earn points on every purchase and redeem them for exclusive rewards
@@ -37,13 +37,13 @@ export default function HomePage() {
               Learn more
             </Link>
           </div>
-          <div className="text-center p-6 rounded-lg border bg-card">
+          <div className="text-center p-6 rounded-lg border" style={{ backgroundColor: "#C9F0A2" }}>
             <h3 className="text-xl font-semibold mb-4">For Businesses</h3>
             <p className="text-muted-foreground mb-4">
               Build customer loyalty and grow your business with our rewards platform
             </p>
           </div>
-          <div className="text-center p-6 rounded-lg border bg-card">
+          <div className="text-center p-6 rounded-lg border" style={{ backgroundColor: "#A2D4F0" }}>
             <h3 className="text-xl font-semibold mb-4">How It Works</h3>
             <p className="text-muted-foreground mb-4">
               Simply scan QR codes or upload receipts to earn points automatically
