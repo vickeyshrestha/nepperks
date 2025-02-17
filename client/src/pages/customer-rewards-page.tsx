@@ -13,7 +13,7 @@ export default function CustomerRewardsPage() {
             <h2 className="text-3xl font-semibold">Earn Rewards</h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="/nepali-shop.jpg"
+                src="https://images.unsplash.com/photo-1625124376320-b0c5589b1585"
                 alt="Nepalese Traditional Shop"
                 className="rounded-lg object-cover h-64 w-full"
               />
