@@ -93,6 +93,40 @@ export default function HomePage() {
             </ul>
           </div>
         </section>
+      <section className="py-16 bg-muted/50">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div className="max-w-2xl mx-auto space-y-6">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Get in Touch</h3>
+                  <div className="space-y-2">
+                    <p className="flex items-center space-x-2">
+                      <span className="text-primary">📍</span>
+                      <span>Fort Worth, Texas</span>
+                    </p>
+                    <p className="flex items-center space-x-2">
+                      <span className="text-primary">📧</span>
+                      <span>contact@nepperks.com</span>
+                    </p>
+                    <p className="flex items-center space-x-2">
+                      <span className="text-primary">📱</span>
+                      <span>+1 (817) 000-0000</span>
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-xl font-semibold">Business Hours</h3>
+                  <div className="space-y-2">
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
