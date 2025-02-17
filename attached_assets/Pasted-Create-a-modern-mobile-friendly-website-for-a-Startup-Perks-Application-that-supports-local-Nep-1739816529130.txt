@@ -1,0 +1,57 @@
+Create a modern, mobile-friendly website for a **Startup Perks Application** that supports local Nepalese businesses by offering rewards to customers who shop at participating physical stores.
+
+### **Key Features:**
+1. **Homepage**:
+   - A visually appealing landing page introducing the app.
+   - Call-to-action (CTA) buttons for "Join as a Customer" and "Join as a Business."
+   - A brief "How It Works" section explaining the process.
+
+2. **User Registration & Login**:
+   - Users can sign up using **mobile number (OTP verification)** or **email**.
+   - Login option for returning users.
+
+3. **Business Registration**:
+   - A dedicated merchant sign-up page for businesses.
+   - Businesses enter their **store details, perks offered, and verification method**.
+   - A dashboard link for business analytics.
+
+4. **Purchase Tracking Methods** (No Credit Card Linking):
+   - QR Code Scanning: Customers scan a store's unique QR code to log purchases.
+   - Receipt Upload: Users can upload receipts, and **AI-powered OCR** extracts transaction details.
+   - Merchant Verification: Stores manually confirm purchases.
+
+5. **Perks & Rewards System**:
+   - Customers earn **loyalty points** or **perks** per transaction.
+   - Tiered rewards to encourage repeat visits.
+   - Perks can be redeemed at participating stores.
+
+6. **Merchant Dashboard**:
+   - Businesses track customer engagement, transactions, and perk redemptions.
+   - Simple analytics to improve offers.
+
+7. **Customer Dashboard**:
+   - Users track their rewards, participating stores, and purchase history.
+   - Option to redeem perks.
+
+8. **Fraud Prevention & Security**:
+   - AI-powered OCR ensures receipt authenticity.
+   - Merchant verification to prevent fake claims.
+   - Reporting system for suspicious activities.
+
+9. **Support & Contact Page**:
+   - In-app chat or form-based customer support.
+   - FAQs for users and merchants.
+
+### **Design Requirements:**
+- **Responsive and Mobile-First**: The site should be optimized for mobile users.
+- **Modern UI/UX**: Clean, user-friendly design with clear navigation.
+- **Dark & Light Mode Support**: Optional theme toggle for better accessibility.
+- **Minimalist & Localized Aesthetic**: A simple, elegant design with **Nepalese cultural elements** (if possible).
+
+### **Technical Stack (Suggested for AI)**:
+- **Frontend:** HTML, CSS, JavaScript (React or Next.js)
+- **Backend:** Node.js with Express.js (if needed for APIs)
+- **Database:** Firebase or MongoDB (for user data)
+- **Authentication:** Firebase Auth (OTP-based login)
+
+Generate the complete code for this website with a responsive and interactive UI. Provide **deployment instructions** so that I can launch the site easily on Replit.
