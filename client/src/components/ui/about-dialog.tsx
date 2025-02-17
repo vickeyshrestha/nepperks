@@ -66,7 +66,7 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
             <h3 className="text-2xl font-semibold">A Message from Our Founder</h3>
             <blockquote className="border-l-4 border-primary pl-6 italic">
               <p className="text-muted-foreground">
-                "Growing up in Nepal, I witnessed the incredible potential of small businesses 
+                "Living in US for past 17 years, I witnessed the incredible potential of small Neaplese businesses 
                 and their impact on communities. NepPerks was born from a vision to bridge 
                 the gap between these businesses and their customers, creating a win-win 
                 relationship through a modern rewards system. Together, we can build stronger 
