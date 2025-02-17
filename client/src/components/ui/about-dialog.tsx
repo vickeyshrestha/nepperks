@@ -20,22 +20,15 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
 
         <div className="space-y-8 py-6">
           {/* Company Overview */}
-          <section className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-4">
-              <h3 className="text-2xl font-semibold">Who We Are</h3>
+          <section className="space-y-4">
+            <h3 className="text-2xl font-semibold">Who We Are</h3>
+            <div className="bg-muted rounded-lg p-6">
               <p className="text-muted-foreground">
                 NepPerks is a pioneering startup dedicated to supporting local Nepalese businesses 
                 through an innovative rewards-based system. We bridge the gap between businesses 
                 and customers, fostering stronger community relationships and economic growth.
               </p>
-            </div>
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="/owner.jpg"
-                alt="Vickey Shrestha"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4 bg-muted">
+              <div className="mt-4">
                 <h4 className="font-semibold">Vickey Shrestha</h4>
                 <p className="text-sm text-muted-foreground">Founder & Owner</p>
                 <p className="text-sm text-muted-foreground">Based in Fort Worth, Texas</p>
