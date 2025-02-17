@@ -107,11 +107,11 @@ export default function HomePage() {
                     </p>
                     <p className="flex items-center space-x-2">
                       <span className="text-primary">📧</span>
-                      <span>contact@nepperks.com</span>
+                      <span>vickey.shrestha@outlook.com</span>
                     </p>
                     <p className="flex items-center space-x-2">
                       <span className="text-primary">📱</span>
-                      <span>+1 (817) 000-0000</span>
+                      <span>+1 (682) 556-9321</span>
                     </p>
                   </div>
                 </div>
