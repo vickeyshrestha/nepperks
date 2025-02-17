@@ -103,42 +103,10 @@ export default function CustomerDashboard() {
                     <QRScanner onScan={handleQrCodeScanned} />
                   </DialogContent>
                 </Dialog>
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" size="sm">
-                      <Upload className="h-4 w-4 mr-2" />
-                      Upload Receipt
-                    </Button>
-                  </DialogTrigger>
-                  <DialogContent>
-                    <DialogHeader>
-                      <DialogTitle>Upload Receipt</DialogTitle>
-                    </DialogHeader>
-                    <form className="space-y-4" onSubmit={(e) => {
-                      e.preventDefault();
-                      const formData = new FormData(e.currentTarget);
-                      // TODO: Implement receipt upload API
-                      toast({
-                        title: "Receipt uploaded",
-                        description: "Your receipt has been uploaded for processing",
-                      });
-                    }}>
-                      <div className="space-y-2">
-                        <Label htmlFor="receipt">Receipt Image</Label>
-                        <Input id="receipt" name="receipt" type="file" accept="image/*" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="business">Business Name</Label>
-                        <Input id="business" name="business" type="text" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="amount">Amount</Label>
-                        <Input id="amount" name="amount" type="number" required />
-                      </div>
-                      <Button type="submit">Upload</Button>
-                    </form>
-                  </DialogContent>
-                </Dialog>
+                <Button variant="outline" size="sm">
+                  <Upload className="h-4 w-4 mr-2" />
+                  Upload Receipt
+                </Button>
               </CardContent>
             </Card>
           </div>
