@@ -1,0 +1,33 @@
+Modify the existing **Startup Perks Application** website to include an **"About" section** positioned on the **top left of the screen**. The section should contain:
+
+### **Content & Design Requirements:**
+1. **Company Overview**  
+   - A **professional description** of the Startup Perks Application, emphasizing its mission to support **local Nepalese businesses** and enhance **customer engagement** through a **rewards-based system**.
+
+2. **Owner’s Name & Picture**  
+   - Display a **professional photo** of the owner (I will upload the image).
+   - Include the **owner’s full name: Vickey Shrestha**, along with the label **"Founder & Owner"** in a visually appealing manner.
+
+3. **Company Location**  
+   - Clearly mention that the company is **based in Fort Worth, Texas**.
+
+4. **Company Vision & Mission**  
+   - Clearly state the company’s **goals and vision**, with a focus on:
+     - **Empowering small businesses** through increased customer engagement.
+     - **Providing value to customers** via perks and rewards.
+     - **Building a sustainable business community**.
+
+5. **Owner's Message**  
+   - A professional statement from **Vickey Shrestha**, sharing the **inspiration behind the startup** and **its impact on local businesses and customers**.
+
+6. **A Call to Action**  
+   - Encourage **customers and businesses** to join the platform and benefit from the perks system.
+
+### **Functional & UI Requirements:**
+- When a user **clicks the "About" section**, it should trigger a **well-formatted modal or expandable dropdown** displaying the content.
+- The **owner’s image should be responsive** and well-placed alongside the text.
+- The **modal should have clear sections** (e.g., **Who We Are, Our Mission, Owner’s Message**).
+- Ensure the **UI is professional and visually appealing**, keeping it **consistent with the rest of the website’s theme**.
+- The **text should be well-structured with proper headings and spacing**.
+
+Generate the **complete code update** required to integrate this feature.
