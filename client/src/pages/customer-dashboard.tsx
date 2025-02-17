@@ -58,7 +58,14 @@ export default function CustomerDashboard() {
       <Navigation />
       <main className="container mx-auto px-4 py-8">
         <div className="grid gap-6">
-          <h1 className="text-3xl font-bold">Welcome, {user?.fullName}</h1>
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold">Welcome, {user?.fullName}</h1>
+            <img 
+              src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=NEPPERKS-USER-${user?.username}-${user?.phone || 'no-phone'}`}
+              alt="Customer QR Code"
+              className="h-24 w-24 border p-2 rounded-lg"
+            />
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             <Card>
