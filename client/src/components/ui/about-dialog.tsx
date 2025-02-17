@@ -11,6 +11,9 @@ interface AboutDialogProps {
 export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
   const { user } = useAuth();
 
+  // Base64 image of Vickey Shrestha
+  const ownerImageUrl = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEwMT8xMC0vLS0yWkRJNFpEMi4yPT49MkVOQz5CTks5Oj1PYkpLS//2wBDAR";
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl">
@@ -31,11 +34,13 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
 
           {/* Owner's Information */}
           <section className="flex items-start space-x-6">
-            <img 
-              src="/owner.jpg" 
-              alt="Vickey Shrestha" 
-              className="h-32 w-32 object-cover rounded-lg"
-            />
+            <div className="w-32 h-32 overflow-hidden rounded-lg border">
+              <img 
+                src={ownerImageUrl}
+                alt="Vickey Shrestha"
+                className="w-full h-full object-cover" 
+              />
+            </div>
             <div>
               <h3 className="text-xl font-semibold">Vickey Shrestha</h3>
               <p className="text-sm text-muted-foreground">Founder & Owner</p>
