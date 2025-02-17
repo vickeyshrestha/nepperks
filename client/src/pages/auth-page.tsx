@@ -116,13 +116,13 @@ export default function AuthPage() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img 
-              src="https://images.unsplash.com/photo-1605640840605-14ac1855827b" 
-              alt="Traditional Nepalese Shop" 
+              src="https://images.unsplash.com/photo-1516274626895-055a99214f08" 
+              alt="Local Shop" 
               className="rounded-lg object-cover h-32"
             />
             <img 
-              src="https://images.unsplash.com/photo-1609942072337-c3370e820005" 
-              alt="Nepalese Market" 
+              src="https://images.unsplash.com/photo-1445067041505-b53988974abd" 
+              alt="Nepalese Culture" 
               className="rounded-lg object-cover h-32"
             />
           </div>
