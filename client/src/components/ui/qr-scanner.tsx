@@ -9,6 +9,7 @@ interface QRScannerProps {
 
 export function QRScanner({ onScan }: QRScannerProps) {
   const [isScanning, setIsScanning] = useState(false);
+  const [error, setError] = useState<string>("");
   const scannerRef = useRef<Html5QrcodeScanner | null>(null);
 
   useEffect(() => {
@@ -18,6 +19,8 @@ export function QRScanner({ onScan }: QRScannerProps) {
         {
           fps: 10,
           qrbox: { width: 250, height: 250 },
+          showTorchButtonIfSupported: true,
+          aspectRatio: 1.0,
         },
         false
       );
@@ -29,9 +32,16 @@ export function QRScanner({ onScan }: QRScannerProps) {
             scannerRef.current.clear();
           }
           setIsScanning(false);
+          setError("");
         },
         (error) => {
           console.error(error);
+          if (error.includes("permission")) {
+            setError("Camera permission denied. Please enable camera access and try again.");
+          } else {
+            setError("Error accessing camera. Please try again.");
+          }
+          setIsScanning(false);
         }
       );
     }
@@ -47,14 +57,23 @@ export function QRScanner({ onScan }: QRScannerProps) {
   return (
     <Card className="p-4">
       {!isScanning ? (
-        <div className="text-center">
-          <Button onClick={() => setIsScanning(true)}>Start Scanning</Button>
+        <div className="text-center space-y-4">
+          <Button onClick={() => {
+            setError("");
+            setIsScanning(true);
+          }}>Start Scanning</Button>
+          {error && (
+            <p className="text-red-500 text-sm">{error}</p>
+          )}
         </div>
       ) : (
         <>
           <div id="qr-reader" className="w-full max-w-sm mx-auto" />
           <div className="text-center mt-4">
-            <Button variant="outline" onClick={() => setIsScanning(false)}>
+            <Button variant="outline" onClick={() => {
+              setIsScanning(false);
+              setError("");
+            }}>
               Cancel
             </Button>
           </div>
