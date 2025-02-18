@@ -10,12 +10,12 @@ import { insertUserSchema } from "@shared/schema";
 import { Redirect } from "wouter";
 import { Loader2 } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useLocation } from "wouter";
+import { useRouter } from "next/navigation";
 
 export default function AuthPage() {
   const { user, loginMutation } = useAuth();
   const queryClient = useQueryClient();
-  const [_, navigate] = useLocation();
+  const navigate = useRouter();
 
   const loginForm = useForm({
     defaultValues: {
