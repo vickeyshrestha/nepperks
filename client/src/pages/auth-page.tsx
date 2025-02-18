@@ -63,7 +63,7 @@ export default function AuthPage() {
     },
     onSuccess: (user) => {
       queryClient.setQueryData(["/api/user"], user);
-      navigate(user.type === "business" ? "/business/dashboard" : "/customer");
+      navigate(user.type === "business" ? "/business" : "/dashboard");
     },
   });
 

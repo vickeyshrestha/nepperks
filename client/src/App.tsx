@@ -18,7 +18,6 @@ function Router() {
       <Route path="/" component={HomePage} />
       <Route path="/auth" component={AuthPage} />
       <Route path="/customer-rewards" component={CustomerRewardsPage} />
-      <ProtectedRoute path="/business/dashboard" component={BusinessDashboard} />
       <ProtectedRoute path="/business" component={BusinessDashboard} />
       <ProtectedRoute path="/customer" component={CustomerDashboard} />
       <Route component={NotFound} />
