@@ -9,14 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { insertUserSchema } from "@shared/schema";
 import { Redirect } from "wouter";
 import { Loader2 } from "lucide-react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useLocation } from "wouter";
 
 export default function AuthPage() {
-  const { user, loginMutation } = useAuth();
-  const queryClient = useQueryClient();
-  const [_, navigate] = useLocation();
-
+  const { user, loginMutation, registerMutation } = useAuth();
+  
   const loginForm = useForm({
     defaultValues: {
       username: "",
@@ -36,38 +32,6 @@ export default function AuthPage() {
     },
   });
 
-  const registerMutation = useMutation({
-    mutationFn: async (data: any) => {
-      const res = await fetch("/api/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error(await res.text());
-      const user = await res.json();
-
-      if (user.type === "business") {
-        const businessRes = await fetch("/api/businesses", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: `${user.fullName}'s Business`,
-            description: "Welcome to my business",
-            userId: user.id
-          }),
-        });
-        if (!businessRes.ok) throw new Error(await businessRes.text());
-      }
-
-      return user;
-    },
-    onSuccess: (user) => {
-      queryClient.setQueryData(["/api/user"], user);
-      navigate(user.type === "business" ? "/business" : "/dashboard");
-    },
-  });
-
-
   if (user) {
     return <Redirect to="/" />;
   }
@@ -81,7 +45,7 @@ export default function AuthPage() {
               <TabsTrigger value="login" className="w-full">Login</TabsTrigger>
               <TabsTrigger value="register" className="w-full">Register</TabsTrigger>
             </TabsList>
-
+            
             <TabsContent value="login">
               <form onSubmit={loginForm.handleSubmit((data) => loginMutation.mutate(data))}>
                 <div className="space-y-4">
